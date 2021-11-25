@@ -1,0 +1,152 @@
+.footer {
+
+   // .footer__container
+
+   &__container {
+   }
+
+   // .footer__top
+
+   &__top {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      row-gap: 20px;
+      margin-bottom: 10px;
+        @media (max-width: $md3+px) {
+         grid-template-columns: repeat(2,1fr);
+         justify-content: center;
+         text-align: center;
+        }
+        @media (max-width: $md4+px) {
+         grid-template-columns: 1fr;
+        }
+   }
+
+   // .footer__column
+
+   &__column {
+   }
+
+   // .footer__logo
+
+   &__logo {
+   }
+
+   // .footer__social
+
+   &__social {
+   }
+
+   // .footer__menu
+
+   &__menu {
+   }
+
+   // .footer__text
+
+   &__text {
+      font-weight: 500;
+      @include adaptive-value("font-size", 20, 18, 1);
+      line-height: 150%;
+      margin-bottom: 34px;
+   }
+
+   // .footer__form
+
+   &__form {
+   }
+
+   // .footer__input
+
+   &__input {
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
+      padding: 10px 15px;
+      height: 48px;
+      width: 100%;
+      margin-bottom: 20px;
+   }
+
+   // .footer__button
+
+   &__button {
+      min-height: 40px !important;
+      padding: 0 15px !important;
+        @media (max-width: $md4+px) {
+           width: 100%;
+        }
+   }
+
+   // .footer__bottom
+
+   &__bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include adaptive-value("font-size", 16, 14, 1);
+      line-height: 187%;
+      @include adaptive-value("margin-bottom", 45, 25, 1);
+   }
+}
+.logo-footer {
+   display: flex;
+   align-items: flex-end;
+   @media (max-width: $md3+px) {
+   justify-content: center;
+   }
+   margin-bottom: 25px;
+   // .logo-footer__icon
+
+   &__icon {
+      width: 32px;
+      height: 30px;
+      margin-right: 15px;
+   }
+
+   // .logo-footer__text
+
+   &__text {
+      font-weight: bold;
+      font-size: 24px;
+      color: #173A56;
+   }
+}
+.social-footer {
+   display: inline-flex;
+   gap: 15px;
+   
+}
+
+.menu-footer {
+
+   // .menu-footer__title
+
+   &__title {
+      font-weight: 500;
+      @include adaptive-value("font-size", 20, 18, 1);
+      line-height: 150%;
+      margin-bottom: 8px;
+   }
+
+   // .menu-footer__list
+
+   &__list {
+   }
+
+   // .menu-footer__item
+
+   &__item {
+   }
+
+   // .menu-footer__link
+
+   &__link {
+      color: inherit;
+      line-height: 219%;
+      @media (any-hover: hover){
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
+

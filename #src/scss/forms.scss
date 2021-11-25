@@ -1,0 +1,33 @@
+//<INPUT (inp+tab)>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.input {
+	width: 100%;
+	display: block;
+	padding: 0px 20px;
+	font-size: 15px;
+	height: 54px;
+   background: #F5F5F5;
+   border: 1px solid #E8E8E8;
+   border-radius: 39px;
+   line-height: 107%;
+   letter-spacing: 0.1px;
+	&._focus {
+	}
+	&._error {
+		border: 2px solid red;
+	}
+}
+textarea.input {
+	resize: none;
+   height: 193px;
+   padding-top: 20px;
+}
+//</INPUT>====================================================================================================
+

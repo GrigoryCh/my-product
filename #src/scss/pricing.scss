@@ -1,0 +1,269 @@
+.pricing {
+
+		// .pricing__price
+
+		&__price {
+         @include adaptive-value("padding-top", 50, 25, 1);
+         @include adaptive-value("margin-bottom", 150, 50, 1);
+		}
+
+		// .pricing__title
+
+		&__title {
+         @include adaptive-value("margin-bottom", 32, 15, 1);
+		}
+		
+       // .pricing__enterprise
+
+      &__enterprise {
+         @include adaptive-value("margin-bottom", 150, 50, 1);
+      }
+
+      // .pricing__effects
+
+      &__effects {
+         @include adaptive-value("margin-bottom", 150, 50, 1);
+      }
+
+      // .pricing__question
+
+      &__question {
+         @include adaptive-value("margin-bottom", 150, 50, 1);
+      }
+      // .pricing__join
+
+		&__join {
+         @include adaptive-value("margin-bottom", 150, 50, 1);
+		}
+}
+
+.title-pricing {
+   text-align: center;
+   font-weight: 600;
+   font-size: 24px;
+   @include adaptive-value("font-size", 24, 20, 1);
+   line-height: 1.5;
+}
+
+//==========================================================================================================================
+
+.enterprise {
+   background: linear-gradient(180deg, #F7F7F7 0%, rgba(247, 247, 247, 0) 100%);
+   @include adaptive-value("padding-top", 50, 25, 1);
+   @include adaptive-value("padding-bottom", 50, 25, 1);
+
+   // .enterprise__container
+
+   &__container {
+      text-align: center;
+   }
+
+   // .enterprise__title
+
+   &__title {
+      @include adaptive-value("margin-bottom", 16, 0, 1);
+   }
+
+   // .enterprise__header
+
+   &__header {
+      @include adaptive-value("margin-bottom", 32, 15, 1);
+   }
+
+   // .enterprise__button
+
+   &__button {
+      min-height: 44px !important;
+      padding: 0 18px !important;
+   }
+}
+
+//==========================================================================================================================
+
+.effects {
+
+   // .effects__title
+
+   &__title {
+      text-align: center;
+      font-weight: bold;
+      @include adaptive-value("font-size", 34, 24, 1);
+      line-height: 1.5;
+      @include adaptive-value("margin-bottom", 56, 25, 1);
+   }
+
+   // .effects__body
+
+   &__body {
+      @media (min-width: $md3+px) {
+      display: flex;
+      margin: 0 -30px;
+      align-items: center;
+      }
+   }
+
+   // .effects__column
+
+   &__column {
+      @media (min-width: $md3+px) {
+      flex: 0 0 50%;
+      padding: 0 30px;
+      }
+   }
+
+   // .effects__image
+
+   &__image {
+      img {
+         max-width: 100%;
+      }
+        @media (max-width: $md3+px) {
+           text-align: center;
+           margin-bottom: 20px;
+        }
+   }
+
+   // .effects__items
+
+   &__items {
+      display: grid;
+      grid-auto-flow: row;
+      row-gap: 32px;
+   }
+}
+
+.item-effects {
+   display: grid;
+   grid-template: 50px auto/ 50px 1fr;
+   row-gap: 14px;
+   column-gap: 16px;
+   align-items: center;
+
+   // .item-effects__icon
+
+   &__icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #F4F5F7;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+   }
+
+   // .item-effects__title
+
+   &__title {
+      font-weight: 600;
+      @include adaptive-value("font-size", 24, 20, 1);
+      line-height: 1.5;
+   }
+
+   // .item-effects__text
+
+   &__text {
+      grid-column: span 2;
+      @include adaptive-value("font-size", 16, 14, 1);
+      line-height: 1.75;
+      padding: 0 8px;
+   }
+}
+
+//==========================================================================================================================================
+.question {
+
+   // .question__header
+
+   &__header {
+      text-align: center;
+      @include adaptive-value("margin-bottom", 50, 25, 1);
+   }
+
+   // .question__spollers
+
+   &__spollers {
+      max-width: 920px;
+      margin: 0 auto;
+   }
+}
+
+.spollers-block {
+
+   // .spollers-block__item
+   &__item {
+      margin: 0px 0px 20px 0px;
+      &:last-child {
+         margin: 0px 0px 0px 0px;
+      }
+      border-bottom: 1px solid #E7E7E7;
+      padding-bottom: 22px;
+   }
+
+   // .spollers-block__header
+
+   &__header {
+      cursor: pointer;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      &._active { // При нажатии на header
+         .spollers-block__icon::before { // Убрать вертикальную линию
+            width: 0;
+         }
+         .spollers-block__icon { // Повернуть иконку на 180 (или 360) град
+         transform: rotate(180deg);
+         }
+      }
+   }
+
+   // .spollers-block__icon
+
+   &__icon {
+      background-color: $green;
+      flex: 0 0 24px;
+      height: 24px;
+      border-radius: 50%;
+      position: relative;
+      transform: rotate(0deg);
+      transition: all 0.3s ease 0s;
+      &::before { // Вертикальная линия +
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         height: 12px;
+         width: 2px;
+         background: #fff;
+      }
+      &::after { // Горизонтальная линия +
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         height: 2px;
+         width: 12px;
+         background: #fff;
+      }
+   }
+
+   &__title {
+      font-weight: 500;
+      @include adaptive-value("font-size", 18, 16, 1);
+      line-height: 1.5;
+      padding-right: 5px;
+      @include adaptive-value("padding-left", 15, 10, 1);
+   }
+   
+   // .spollers-block__body
+   &__body {
+      display: none;
+      padding: 16px 0px 0px 0px;
+      @include adaptive-value("font-size", 16, 14, 1);
+      line-height: 1.5;
+      &._active {
+         display: block;
+      }
+   }
+}

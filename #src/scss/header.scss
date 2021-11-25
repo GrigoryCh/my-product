@@ -1,5 +1,7 @@
 //===================================================================================
 .header {
+   z-index: 50;
+   position: relative;
    padding: 20px 0;
    // .header__container
 
@@ -152,6 +154,11 @@
       color: inherit;
       font-size: 16px;
       line-height: 175%;
+      @media (any-hover: hover){
+         &:hover {
+            text-decoration: underline;
+         }
+      }
       &.active {
          font-weight: 600;
       }
