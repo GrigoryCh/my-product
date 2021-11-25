@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			@@include('_header.html',{})
+			@@include('_header.html',{"link":"1"})
 			<main class="page">
             <section class="page__work work">
                <div class="work__container">
@@ -42,28 +42,28 @@
                      <div class="product__container">
                         <div class="product__row">
                            <div class="product__column column-product">
-                              <div class="column-product__icon column-product__icon_g">
+                              <div class="column-product__icon icon icon_g">
                                  <img src="img/product/01.svg" alt="icon">
                               </div>
                               <div class="column-product__title">First click tests</div>
                               <div class="column-product__text">While most people enjoy casino gambling,</div>
                            </div>
                            <div class="product__column column-product">
-                              <div class="column-product__icon column-product__icon_b">
+                              <div class="column-product__icon icon icon_b">
                                  <img src="img/product/02.svg" alt="icon">
                               </div>
                               <div class="column-product__title">Design surveys</div>
                               <div class="column-product__text">Sports betting, lottery and bingo playing for the fun</div>
                            </div>
                            <div class="product__column column-product">
-                              <div class="column-product__icon column-product__icon_p">
+                              <div class="column-product__icon icon icon_p">
                                  <img src="img/product/03.svg" alt="icon">
                               </div>
                               <div class="column-product__title">Preference tests</div>
                               <div class="column-product__text">The Myspace page defines the individual.</div>
                            </div>
                            <div class="product__column column-product">
-                              <div class="column-product__icon column-product__icon_r">
+                              <div class="column-product__icon icon icon_r">
                                  <img src="img/product/04.svg" alt="icon">
                               </div>
                               <div class="column-product__title">Five second tests</div>
@@ -242,10 +242,130 @@
                   </div>
                </div>
             </section>
+            <section class="page__price price">
+               <div class="price__container">
+                  <div class="price__header header-block">
+                     <div class="header-block__title">Price Table</div>
+                     <div class="header-block__text">We offer competitive price</div>
+                  </div>
+                  <div class="price__row price-block">
+                     <div class="price-block__column column-price">
+                        <div class="column-price__title">Free</div>
+                        <div class="column-price__subtitle">Brief price description</div>
+                        <div class="column-price__body">
+                           <div class="column-price__number">0</div>
+                           <div class="column-price__dollar">$</div>
+                           <div class="column-price__time">Per / month</div>
+                        </div>
+                        <div class="column-price__text">
+                           <div class="column-price__string">Only 2 Operators</div>
+                           <div class="column-price__string">Notifications</div>
+                           <div class="column-price__string">Landing Pages</div>
+                        </div>
+                        <a href=" " class="column-price__button btn">Order Now</a>
+                     </div>
+                     <div class="price-block__column column-price">
+                        <div class="column-price__title">Standard</div>
+                        <div class="column-price__subtitle">Brief price description</div>
+                        <div class="column-price__body">
+                           <div class="column-price__number">5</div>
+                           <div class="column-price__dollar">$</div>
+                           <div class="column-price__time">Per / month</div>
+                        </div>
+                        <div class="column-price__text">
+                           <div class="column-price__string">5+ Operators</div>
+                           <div class="column-price__string">Notifications</div>
+                           <div class="column-price__string">Landing Pages</div>
+                        </div>
+                        <a href=" " class="column-price__button btn">Order Now</a>
+                     </div>
+                     <div class="price-block__column column-price">
+                        <div class="column-price__title">Premium</div>
+                        <div class="column-price__subtitle">Brief price description</div>
+                        <div class="column-price__body">
+                           <div class="column-price__number">10</div>
+                           <div class="column-price__dollar">$</div>
+                           <div class="column-price__time">Per / month</div>
+                        </div>
+                        <div class="column-price__text">
+                           <div class="column-price__string">10+ Operators</div>
+                           <div class="column-price__string">Notifications</div>
+                           <div class="column-price__string">Landing Pages</div>
+                        </div>
+                        <a href=" " class="column-price__button btn">Order Now</a>
+                     </div>
+                     
+                  </div>
+               </div>
+            </section>
+            <section class="page__what what">
+               <div class="what__container">
+                  <div class="what__header header-block">
+                     <div class="header-block__title">What Clients Say</div>
+                     <div class="header-block__text">Problems trying to resolve the conflict between 
+                        the two major realms of Classical physics: Newtonian mechanics </div>
+                  </div>
+                  <div class="what__row">
+                     <div class="what__column column-what">
+                        <div class="column-what__rating"></div>
+                        <div class="column-what__text">Product helps you see how many 
+                           more days you need to work to 
+                           reach your financial goal.</div>
+                        <div class="column-what__client">
+                           <a href="" class="column-what__photo"> 
+                              <img src="img/what/01.jpg" alt="user"> 
+                           </a> 
+                              <a href="" class="column-what__name">Wahid Ari</a> 
+                           <div class="column-what__work">Designer</div> 
+                        </div>
+                     </div>
+                     <div class="what__column column-what">
+                        <div class="column-what__rating"></div>
+                        <div class="column-what__text">Product helps you see how many 
+                           more days you need to work to 
+                           reach your financial goal.</div>
+                        <div class="column-what__client">
+                           <a href="" class="column-what__photo"> 
+                              <img src="img/what/02.jpg" alt="user"> 
+                           </a> 
+                              <a href="" class="column-what__name">Wahid Ari</a> 
+                           <div class="column-what__work">Designer</div> 
+                        </div>
+                     </div>
+                     <div class="what__column column-what">
+                        <div class="column-what__rating"></div>
+                        <div class="column-what__text">Product helps you see how many 
+                           more days you need to work to 
+                           reach your financial goal.</div>
+                        <div class="column-what__client">
+                           <a href="" class="column-what__photo"> 
+                              <img src="img/what/03.jpg" alt="user"> 
+                           </a> 
+                              <a href="" class="column-what__name">Wahid Ari</a> 
+                           <div class="column-what__work">Designer</div> 
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <div class="page__join join">
+               <div class="join__container">
+                  <div class="join__body join-block">
+                     <div class="join-block__content">
+                        <div class="join-block__text">Join 100 Compannies who boost their business with Product</div>
+                        <a href=" " class="join-block__button btn btn_w">Get This</a>
+                     </div>
+                     <div class="join-block__image">
+                        <img src="img/join/01.png" alt="join">
+                     </div>
+                  </div>
+               </div>
+            </div>
 			</main>
 			@@include('_footer.html',{})
 		</div>
       <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+      <script src="js/forms.js"></script>
 		<script src="js/script.min.js"></script>
 	</body>
 </html>
