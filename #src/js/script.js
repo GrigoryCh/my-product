@@ -86,6 +86,25 @@ new Swiper('.slider-strategies__body', {
       el: '.slider-strategies__dotts',
       clickable: true,
     },
+    breakpoints: {
+      // when window width >= 320px
+      320: {
+      centeredSlides: false,
+      initialSlide: 0,
+      slidesPerView: 1.2,
+      spaceBetween: 15,
+      },
+      768: {
+      centeredSlides: false,
+      initialSlide: 0,
+      slidesPerView: 2,
+      spaceBetween: 20,
+      },
+      992: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      },
+   }
 	});
 }
 //======================================================================================================================================
