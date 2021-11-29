@@ -10,13 +10,13 @@
 // <Адаптивное свойство>
 @mixin adaptive-value($property, $startSize, $minSize, $type) {
    $addSize: $startSize - $minSize;
-   @if type==1 {
+   @if $type==1 {
       // Только если меньше контейнера
       #{$property}: $startSize + px;
       @media (max-width: #{$maxWidthContainer + px}) {
          #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
       }
-   } @else if type==2 {
+   } @else if $type==2 {
       // Только если больше контейнера
       #{$property}: $startSize + px;
       @media (min-width: #{$maxWidthContainer + px}) {
@@ -342,7 +342,12 @@ body
      @include adaptive-value("font-size", 24, 20, 1);
      line-height: 167%;
      @include adaptive-value("margin-bottom", 40, 25, 1);
-  }  
+      @media (any-hover: hover){
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }  
 }
 //===</CARD>========================================================================================================================
 
@@ -1312,6 +1317,11 @@ body
       letter-spacing: 0.2px;
       color: $green;
       align-self: flex-end;
+      @media (any-hover: hover){
+         &:hover {
+            text-decoration: underline;
+         }
+      }
    }
 
    // .column-what__work
